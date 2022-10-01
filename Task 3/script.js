@@ -33,15 +33,18 @@ const createUserCard = (data) => {
     const divCard = document.createElement("div");
     divCard.setAttribute("class", "card");
 
+    const divImg = document.createElement("div");
     const img = document.createElement("img");
     img.setAttribute("src", element.avatar_url);
     img.setAttribute("alt", "Avatar");
+    img.setAttribute("style", "width:100%");
+    divImg.append(img);
 
     const divContainer = document.createElement("div");
     divContainer.setAttribute("class", "container");
-    divContainer.innerHTML = element.login;
+    divContainer.innerHTML = `<h4><b>Login:  ${element.login} </b></h4>`;
 
-    divCard.append(img, divContainer);
+    divCard.append(divImg, divContainer);
     outputDiv.append(divCard);
   });
 };
