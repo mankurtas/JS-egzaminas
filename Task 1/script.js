@@ -22,21 +22,27 @@ const convertWeight = (e) => {
 
   if (isNaN(inputWeight)) {
     output.innerHTML = "You entered not a number. Please enter a number.";
+    output.style.cssText =
+      "background-color: #e2c8c8; color: red; font-size: 1.1em; max-width: 80%; margin: 50px auto; text-align: center; padding: 1.5rem;  ";
+
     input.value = "";
   } else {
     console.log(input.value);
     output.innerHTML =
-      "Svoris svarais: " +
+      "Weight in lbs: " +
       toLbs(inputWeight) +
       " lb." +
       "<br />" +
-      "Svoris gramais: " +
+      "Weight in grams: " +
       toGrams(inputWeight) +
       " g." +
       "<br />" +
-      "Svoris uncijomis: " +
+      "Weigt in ounces: " +
       toOz(inputWeight) +
       " oz.";
+
+    output.style.cssText =
+      "background-color: #c7a959; color: green; font-size: 2.5em; max-width: 80%; margin: 50px auto; text-align: center; padding: 1.5rem;  ";
 
     input.value = "";
   }
