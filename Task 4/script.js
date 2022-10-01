@@ -29,8 +29,6 @@ const createCard = (data) => {
   data.forEach((element) => {
     const divCard = document.createElement("div");
     divCard.setAttribute("class", "card border-success mb-3");
-    divCard.style = "max-width: 18rem;";
-
     const header = document.createElement("div");
     header.setAttribute("class", "card-header");
     header.innerHTML = element.brand;
